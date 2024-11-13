@@ -1,9 +1,6 @@
 // import imageName from "./path/to/image";
 import "./styles.css";
-import pigeonEatingBread from "../assets/pigeon-eating-bread.jpg";
+import {loadMenu} from "./initialpageload";
 
 
-const image = document.createElement("img")
-image.src = pigeonEatingBread;
-console.log("works? yup");
-document.querySelector("body").appendChild(image)
+loadMenu();

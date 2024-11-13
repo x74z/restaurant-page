@@ -97,6 +97,9 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  img{
+    width: 50%;
+  }
 }
 
 .reviews-container {
