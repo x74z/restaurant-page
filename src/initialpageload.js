@@ -1,6 +1,6 @@
 import pigeonEatingBread from "../assets/pigeon-eating-bread.jpg";
 
-export function loadMenu() {
+export function loadHome() {
   const createReview = (reviewAuthor, reviewText) => {
     const review = document.createElement("div");
     review.className = "reviews";
