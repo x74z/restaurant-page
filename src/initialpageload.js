@@ -3,26 +3,30 @@ import pigeonEatingBread from "../assets/pigeon-eating-bread.jpg";
 export function loadHome() {
   const createReview = (reviewAuthor, reviewText) => {
     const review = document.createElement("div");
-    review.className = "reviews";
-    const reviewsTitle = document.createElement("h1");
-    reviewsTitle.innerText = reviewAuthor;
+    review.className = "review";
+    const reviewsAuthor = document.createElement("h1");
+    reviewsAuthor.innerText = reviewAuthor;
     const reviewContent = document.createElement("p");
     reviewContent.innerText = reviewText;
 
-    // Add the p and h1 to review, and review to reviews-container
-    review.appendChild(reviewsTitle);
+    // Everything gets inside a div(review) and then gets added to reviewContainer. This way i have a div inside
+    // the reviews-container, so sizing with flexbox remains consistent
+    // reviewAuthor && reviewContent   =>  .review  =>  .reviews  => .reviews-container
+    const mainContainer = document.querySelector(".reviews-container");
+    const reviewContainer = document.querySelector(".reviews");
+    review.appendChild(reviewsAuthor);
     review.appendChild(reviewContent);
-    const container = document.querySelector(".reviews-container");
-    container.appendChild(review);
+    reviewContainer.appendChild(review);
+    mainContainer.appendChild(reviewsContainer);
   };
   const content = document.querySelector("div#content");
   const introduction = document.createElement("div");
   introduction.className = "introduction";
-  const reviewsContainer = document.createElement("div");
-  reviewsContainer.className = "reviews-container";
+  const reviewsContentAndTitleContainer = document.createElement("div");
+  reviewsContentAndTitleContainer.className = "reviews-container";
 
   content.appendChild(introduction);
-  content.appendChild(reviewsContainer);
+  content.appendChild(reviewsContentAndTitleContainer);
 
   // Add the inside of introduction
 
@@ -37,9 +41,13 @@ export function loadHome() {
   introduction.appendChild(introText);
   // Add the title of reviews
   const reviewTitle = document.createElement("h1");
-  reviewTitle.innerText = "Read the reviews...";
-  reviewsContainer.appendChild(reviewTitle);
+  reviewTitle.innerText = "Don't believe us? Read the reviews...!";
+  reviewsContentAndTitleContainer.appendChild(reviewTitle);
+  // Add the div where every review will be
 
+  const reviewsContainer = document.createElement("div");
+  reviewsContainer.className = "reviews";
+  reviewsContentAndTitleContainer.appendChild(reviewsContainer);
   // Add every review
   createReview("Donut", '"The food was marvelous!!"');
   createReview("Pam", '"The lentils were delicious!!"');

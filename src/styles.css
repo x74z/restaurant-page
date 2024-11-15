@@ -69,22 +69,28 @@ h6 {
 }
 
 body {
-  background-color:#0f0f0f ;
-  color: #18A999;
+  background-color: #0f0f0f;
+  color: #18a999;
   font-family: Roboto, system-ui;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  text-align: center;
 }
 
 nav {
   margin-top: 30px;
   justify-self: center;
+  display: flex;
+  gap: 20px;
+
   button {
-    border: 1px solid #F7F0F0;
+    font-size: 1.9rem;
+    border: 1px solid #f7f0f0;
+    border-radius: 20px;
     padding: 16px;
-    background-color: #18A999;
-    color: #F7F0F0;
+    background-color: #18a999;
+    color: #f7f0f0;
     font-weight: 700;
   }
 }
@@ -97,14 +103,21 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  img{
+  margin: 0 30px;
+
+  img {
     width: 50%;
+  }
+
+  p {
+    font-size: 1.6rem;
   }
 }
 
 .reviews-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 
   h1 {
@@ -113,8 +126,61 @@ nav {
 }
 
 .reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review {
   background-color: #de3c4b;
   border-radius: 10px;
-  color: #F7F0F0;
+  color: #f7f0f0;
+  max-width: 50vh;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-style: italic;
+  }
+}
+
+.menu {
+  background-color: #0d5950;
+  display: flex;
+  border-radius: 20px;
   padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+
+  h1 {
+    color: #4c91ff;
+  }
+}
+
+.menu>div {
+  background-color: #f7f0f0;
+  border-radius: 20px;
+  padding: 20px;
+
+  h1 {
+    font-size: 2.3rem;
+    color: black;
+  }
+
+  p {
+    color: #de3c4b;
+  }
+
+  /* price tag */
+  h2 {
+    color: black;
+    font-size: 2rem;
+  }
 }
