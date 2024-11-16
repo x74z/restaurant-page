@@ -84,9 +84,11 @@ body {
 }
 
 nav {
+  width: 61vh;
   margin-top: 30px;
   justify-self: center;
   display: flex;
+  justify-content: center;
   gap: 20px;
 
   button {
@@ -192,6 +194,7 @@ nav {
   width: 61vh;
 
   h1 {
+    font-size: 3.6rem;
     color: var(--blue);
   }
 }
@@ -202,7 +205,7 @@ nav {
   padding: 20px;
 
   h1 {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
     color: black;
   }
 
@@ -214,7 +217,7 @@ nav {
   /* price tag */
   h2 {
     color: black;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -242,6 +245,6 @@ nav {
     font-size: 2.3rem;
     text-decoration: underline;
     font-style: italic;
-    color: var(--red);
+    color: var(--black);
   }
 }

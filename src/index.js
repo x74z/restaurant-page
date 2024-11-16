@@ -1,6 +1,6 @@
 // import imageName from "./path/to/image";
 import "./styles.css";
-import { loadHome } from "./initialpageload";
+import { loadHome } from "./loadhome";
 import { loadMenu} from "./loadmenu";
 import { loadAbout} from "./loadabout";
 
