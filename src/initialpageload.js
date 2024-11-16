@@ -35,11 +35,11 @@ export function loadHome() {
 
   const introText = document.createElement("p");
   introText.innerText =
-    "Ever wanter to eat great food WITHOUT relying on humans? we got you covered \nEnjoy a great meal with all of your fluffy friends!";
+    "Ever wanted to eat great food WITHOUT relying on humans? we got you covered! \nEnjoy a great meal with all of your fluffy friends!";
   introduction.appendChild(introText);
   // Add the title of reviews
   const reviewTitle = document.createElement("h1");
-  reviewTitle.innerText = "Don't believe us? Read the reviews...!";
+  reviewTitle.innerText = "Don't believe us? Read the reviews...";
   reviewsContentAndTitleContainer.appendChild(reviewTitle);
   // Add the div where every review will be
 
