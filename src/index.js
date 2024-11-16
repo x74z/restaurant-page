@@ -2,7 +2,7 @@
 import "./styles.css";
 import { loadHome } from "./initialpageload";
 import { loadMenu} from "./loadmenu";
-// import { loadAbout} from "./loadabout";
+import { loadAbout} from "./loadabout";
 
 loadHome();
 
@@ -20,5 +20,5 @@ document.querySelector("#menu").addEventListener("pointerdown", () => {
 });
 document.querySelector("#about").addEventListener("pointerdown", () => {
   clearContent();
-  // loadAbout();
+  loadAbout();
 });

@@ -14,8 +14,7 @@ export function loadHome() {
     // reviewAuthor && reviewContent   =>  .review  =>  .reviews  => .reviews-container
     const mainContainer = document.querySelector(".reviews-container");
     const reviewContainer = document.querySelector(".reviews");
-    review.appendChild(reviewsAuthor);
-    review.appendChild(reviewContent);
+    review.append(reviewsAuthor, reviewContent);
     reviewContainer.appendChild(review);
     mainContainer.appendChild(reviewsContainer);
   };
@@ -25,8 +24,7 @@ export function loadHome() {
   const reviewsContentAndTitleContainer = document.createElement("div");
   reviewsContentAndTitleContainer.className = "reviews-container";
 
-  content.appendChild(introduction);
-  content.appendChild(reviewsContentAndTitleContainer);
+  content.append(introduction, reviewsContentAndTitleContainer);
 
   // Add the inside of introduction
 

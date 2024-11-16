@@ -19,9 +19,7 @@ const menu = (() => {
     price.innerText = menuItem.price;
     // Function to add each thing to its container
     function addEachNode(menuContainer) {
-      itemContainer.appendChild(name);
-      itemContainer.appendChild(description);
-      itemContainer.appendChild(price);
+      itemContainer.append(name, description, price);
       // Add the div to its parent
       menuContainer.appendChild(itemContainer);
     }
@@ -87,9 +85,7 @@ export function loadMenu() {
   drinksTitle.innerText = "Drinks";
   drinksContainer.appendChild(drinksTitle);
 
-  content.appendChild(mainDishesContainer);
-  content.appendChild(sideDishesContainer);
-  content.appendChild(drinksContainer);
+  content.append(mainDishesContainer, sideDishesContainer, drinksContainer);
 
   // add the contents of the menu
   menu.addMenuObject("Big bowl of seeds", "Very yummy", "4€", "main");
