@@ -1,3 +1,4 @@
+// Menu iife
 const menu = (() => {
   let mainDishes = [];
   let sideDishes = [];
@@ -54,6 +55,7 @@ const menu = (() => {
         addItem(sideDishes);
         break;
       case "drinks":
+      case "drink":
         addItem(drinks);
         break;
 
@@ -62,8 +64,17 @@ const menu = (() => {
         break;
     }
   };
+  const addMainDish = (name, description, price) => {
+    addMenuObject(name, description, price, "main");
+  };
+  const addSideDish = (name, description, price) => {
+    addMenuObject(name, description, price, "side");
+  };
+  const addDrink = (name, description, price) => {
+    addMenuObject(name, description, price, "drinks");
+  };
 
-  return { addMenuObject, mainDishes, sideDishes, drinks };
+  return { addMainDish, addSideDish, addDrink, mainDishes, sideDishes, drinks };
 })();
 export function loadMenu() {
   const content = document.querySelector("div#content");
@@ -88,8 +99,9 @@ export function loadMenu() {
   content.append(mainDishesContainer, sideDishesContainer, drinksContainer);
 
   // add the contents of the menu
-  menu.addMenuObject("Big bowl of seeds", "Very yummy", "4€", "main");
-  menu.addMenuObject("Big bowl of seeds 2", "2 x Very yummy", "8€", "main");
-  menu.addMenuObject("smol bowl of seeds", "less yummy?", "1€", "side");
-  menu.addMenuObject("Big bowl of WATER", "Quite refreshing", "0,5€", "drinks");
+  menu.addMainDish("Big bowl of seeds", "Very yummy", "5€", "main");
+  menu.addMainDish("Big bowl of seeds 2", "2 x Very yummy", "10€", "main");
+  menu.addSideDish("smol bowl of seeds", "less yummy?", "1€", "side");
+  menu.addSideDish( "Lentis", "Our chef's favorite dish, enjoy freshly picked up lentils", "2€", "side",);
+  menu.addDrink("Big bowl of WATER", "Quite refreshing", "0,5€", "drinks");
 }
