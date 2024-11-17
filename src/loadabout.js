@@ -26,5 +26,5 @@ export function loadAbout() {
   addElement(phoneNumberContainer, "Wanna call us for a delivery?", "999 99 99 69")
   addElement(emailContainer, "Feeling too shy for a call?\nEmail us, and we'll bring your food!", "thepigeonrestaurant.deliveries@pigeon.mail")
   addElement(locationContainer1, "This is one of our locations", "Pidgey Street 21")
-  addElement(locationContainer2, "This is one of our locations", "Foxy Street 21")
+  addElement(locationContainer2, "This is another one of our locations", "Foxy Street 21")
 }

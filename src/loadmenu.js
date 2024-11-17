@@ -99,9 +99,17 @@ export function loadMenu() {
   content.append(mainDishesContainer, sideDishesContainer, drinksContainer);
 
   // add the contents of the menu
-  menu.addMainDish("Big bowl of seeds", "Very yummy", "5€", "main");
-  menu.addMainDish("Big bowl of seeds 2", "2 x Very yummy", "10€", "main");
-  menu.addSideDish("smol bowl of seeds", "less yummy?", "1€", "side");
-  menu.addSideDish( "Lentis", "Our chef's favorite dish, enjoy freshly picked up lentils", "2€", "side",);
-  menu.addDrink("Big bowl of WATER", "Quite refreshing", "0,5€", "drinks");
+  menu.addMainDish("Bowl of seeds", "Very yummy", "5€");
+  menu.addMainDish("Bread", "Cut with expertise by our chef", "8€");
+  menu.addMainDish("Wormy Surprise (Vegan!)", "A heaping bowl of premium corn kernels, hand-picked for maximum crunch.", "6€")
+  menu.addMainDish("Deluxe Birdfeeder Platter", "An assortment of seeds, nuts, and dried fruits. Perfect for sharing!", "12€")
+
+  menu.addSideDish("Lentis", "Our chef's favorite dish, enjoy freshly picked up lentils.", "2€");
+  menu.addSideDish("Featherweight French Fries", "Crispy and light french fries.", "3€")
+  menu.addSideDish("Popcorn", "Miniature popped grains, lightly salted. for that crunch.", "2€")
+
+  menu.addDrink("Sky Juice (a.k.a. Rainwater)", "Pure and refreshing, harvested straight from the clouds.", "0,7€");
+  menu.addDrink("Beak Bubble Tea", "Tiny bubbles in a seed-flavored infusion, served in a shallow bowl.", "2.2€");
+  menu.addDrink("Nest Milkshake", "A creamy blend of oats and almond milk, garnished with a hint of honey.", "3€");
+
 }
