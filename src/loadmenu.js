@@ -1,46 +1,46 @@
+const addToDOM = (type, menuItem) => {
+  // Select all of the containers, to add the children later
+  const mainDishesContainer = document.querySelector(".main-dishes");
+  const sideDishesContainer = document.querySelector(".side-dishes");
+  const drinksContainer = document.querySelector(".drinks");
+  // The things that will be added
+  const itemContainer = document.createElement("div");
+  itemContainer.className = "menu-item";
+  const name = document.createElement("h1");
+  name.innerText = menuItem.name;
+  const description = document.createElement("p");
+  description.innerText = menuItem.description;
+  const price = document.createElement("h2");
+  price.innerText = menuItem.price;
+
+  // Function to add each thing to its container
+  function addEachNode(menuContainer) {
+    itemContainer.append(name, description, price);
+    // Add the div to its parent
+    menuContainer.appendChild(itemContainer);
+  }
+  // add the children to the corresponding container
+  switch (type) {
+    case "main":
+      addEachNode(mainDishesContainer);
+      break;
+    case "side":
+      addEachNode(sideDishesContainer);
+      break;
+    case "drinks":
+      addEachNode(drinksContainer);
+      break;
+
+    default:
+      console.error("Not a valid type");
+      break;
+  }
+};
 // Menu iife
 const menu = (() => {
   let mainDishes = [];
   let sideDishes = [];
   let drinks = [];
-
-  const addToDOM = (type, menuItem) => {
-    // Select all of the containers, to add the children later
-    const mainDishesContainer = document.querySelector(".main-dishes");
-    const sideDishesContainer = document.querySelector(".side-dishes");
-    const drinksContainer = document.querySelector(".drinks");
-    // The things that will be added
-    const itemContainer = document.createElement("div");
-    itemContainer.className = "menu-item";
-    const name = document.createElement("h1");
-    name.innerText = menuItem.name;
-    const description = document.createElement("p");
-    description.innerText = menuItem.description;
-    const price = document.createElement("h2");
-    price.innerText = menuItem.price;
-    // Function to add each thing to its container
-    function addEachNode(menuContainer) {
-      itemContainer.append(name, description, price);
-      // Add the div to its parent
-      menuContainer.appendChild(itemContainer);
-    }
-    // add the children to the corresponding container
-    switch (type) {
-      case "main":
-        addEachNode(mainDishesContainer);
-        break;
-      case "side":
-        addEachNode(sideDishesContainer);
-        break;
-      case "drinks":
-        addEachNode(drinksContainer);
-        break;
-
-      default:
-        console.error("Not a valid type");
-        break;
-    }
-  };
   const addMenuObject = (name, description, price, type) => {
     const menuItem = { name: name, description: description, price: price };
     function addItem(menuArray) {
